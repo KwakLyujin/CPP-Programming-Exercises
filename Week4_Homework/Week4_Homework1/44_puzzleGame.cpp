@@ -4,12 +4,12 @@
 #include <conio.h>
 #include <string.h>
 #include <time.h>
-#define DIM 4 //4*4ÆÛÁñ
+#define DIM 4 //4*4í¼ì¦
 
 enum Direction{Left=75,Right=77,Up=72,Down=80};
 static int DirKey[4] = { Left,Right,Up,Down };
-static int map[DIM][DIM]; //ÆÛÁñ¸Ê
-static int x, y ;// ºóÄ­ÀÇ À§Ä¡ (x,y)
+static int map[DIM][DIM]; //í¼ì¦ë§µ
+static int x, y ;// ë¹ˆì¹¸ì˜ ìœ„ì¹˜ (x,y)
 static int nMove;
 static clock_t tStart;
 
@@ -19,11 +19,11 @@ static void init(){
 	}
 		
 	map[DIM - 1][DIM - 1] = 0;
-	x = DIM - 1; y = DIM - 1; //3,3 °íÁ¤
+	x = DIM - 1; y = DIM - 1; //3,3 ê³ ì •
 
-	srand(time(NULL)); //³­¼ö ¹ß»ı ½ÃÀÛ ¼³Á¤
-	tStart= clock(); //±âÁØ ½Ã°¢ ¼³Á¤
-	nMove = 0;  //ÀÌµ¿ È½¼ö ÃÊ±âÈ­ 
+	srand(time(NULL)); //ë‚œìˆ˜ ë°œìƒ ì‹œì‘ ì„¤ì •
+	tStart= clock(); //ê¸°ì¤€ ì‹œê° ì„¤ì •
+	nMove = 0;  //ì´ë™ íšŸìˆ˜ ì´ˆê¸°í™” 
 }
 
 static void display() {
@@ -42,7 +42,7 @@ static void display() {
 	printf("--------------\n\t");
 	clock_t t1 = clock();
 	double d = (double)(t1 - tStart) / CLOCKS_PER_SEC;
-	printf("\n\tÀÌµ¿ È½¼ö: %6d\n\t¼Ò¿ä ½Ã°£:%6.1f\n\n", nMove, d);
+	printf("\n\tì´ë™ íšŸìˆ˜: %6d\n\tì†Œìš” ì‹œê°„:%6.1f\n\n", nMove, d);
 
 }
 
@@ -96,10 +96,10 @@ int playFifteenPuzzle() {
 	init();
 	display();
 	printRanking();
-	printf("\nÆÛÁñÀ» ¼¯¾îÁÖ¼¼¿ä(¿£ÅÍ)...");
+	printf("\ní¼ì¦ì„ ì„ì–´ì£¼ì„¸ìš”(ì—”í„°)...");
 	_getche();
 	shuffle(100);
-	printf("\n°ÔÀÓÀÌ ½ÃÀÛµË´Ï´Ù...");
+	printf("\nê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤...");
 	_getche();
 
 	nMove = 0;
