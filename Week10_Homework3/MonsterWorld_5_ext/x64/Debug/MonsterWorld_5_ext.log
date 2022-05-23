@@ -1,0 +1,3 @@
+﻿  MonsterWorldGame.cpp
+C:\Users\NHOL\Desktop\류진\4학년\전자응용설계\실습문제 해답\실습문제해답\실습10장_1번\MonsterWorldGame.cpp(6,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MonsterWorld_5_ext.vcxproj -> C:\Users\NHOL\Desktop\C++\MonsterWorld_5_ext\x64\Debug\MonsterWorld_5_ext.exe
